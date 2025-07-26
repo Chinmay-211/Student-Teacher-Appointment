@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="../css/teacher.css">
+</head>
+<body>
+  <h2>Teacher Dashboard</h2>
+
+  <!-- 🔘 Logout Button -->
+  <button id="logoutBtn">Logout</button>
+
+  <h3>Incoming Appointments</h3>
+  <table id="appointmentTable" border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Date & Time</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+<h3>Messages from Students</h3>
+<table id="messageTable" border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Message</th>
+      <th>Time</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="messageList">
+    <tr><td colspan="4">Loading messages...</td></tr>
+  </tbody>
+</table>
+
+
+  <!-- ✅ Firebase SDKs (v8) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- ✅ Firebase Init and Logic -->
+  <script src="../js/firebase-init.js"></script>
+  <script src="../js/logout.js"></script>
+  <script src="../js/teacher.js"></script>
+</body>
+</html>

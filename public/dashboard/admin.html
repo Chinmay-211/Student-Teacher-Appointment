@@ -1,0 +1,43 @@
+<!-- public/dashboard/admin.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <h2>Welcome, Admin</h2>
+
+  <!-- 🔘 Logout Button -->
+  <button id="logoutBtn">Logout</button>
+
+  <!-- 🔍 Pending User List -->
+  <h3>Pending Approvals</h3>
+  <ul id="userList"></ul>
+
+  <!-- ➕ Add Teacher -->
+  <h3>Add New Teacher</h3>
+  <form id="addTeacherForm">
+    <input type="text" id="teacherName" placeholder="Name" required /><br>
+    <input type="text" id="teacherEmail" placeholder="Email" required /><br>
+    <input type="text" id="teacherDepartment" placeholder="Department" required /><br>
+    <input type="text" id="teacherSubject" placeholder="Subject" required /><br>
+    <input type="password" id="teacherPassword" placeholder="Temporary Password" required /><br>
+    <button type="submit">Add Teacher</button>
+  </form>
+
+  <!-- ✏️ Manage Teachers -->
+  <h3>Manage Teachers</h3>
+  <ul id="teacherList"></ul>
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Firebase Init & Logic -->
+  <script src="../js/firebase-init.js"></script>
+  <script src="../js/logout.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

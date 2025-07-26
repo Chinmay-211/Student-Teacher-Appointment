@@ -1,0 +1,35 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register</title>
+  <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+  
+
+  <form id="registerForm">
+    <h2>Register as Student</h2>
+    <input type="text" id="registerName" placeholder="Full Name" required /><br>
+    <input type="email" id="registerEmail" placeholder="Email" required /><br>
+    <input type="password" id="registerPassword" placeholder="Password" required /><br>
+
+    <!-- Role selection removed -->
+    <input type="hidden" name="role" value="student" />
+
+    <button type="submit">Register</button>
+  </form>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Firebase init -->
+  <script src="./js/firebase-init.js"></script>
+
+  <!-- Only for students -->
+  <script src="./js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="./css/login.css" />
+
+</head>
+<body>
+  
+  <form id="loginForm">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email" required /><br>
+    <input type="password" id="loginPassword" placeholder="Password" required /><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- Firebase CDN SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+
+  <!-- Firebase init and app logic -->
+  <script src="./js/firebase-init.js"></script>
+  <script src="./js/auth.js"></script>
+</body>
+</html>

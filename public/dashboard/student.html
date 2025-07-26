@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../css/student.css">
+</head>
+<body>
+  <h2>Student Dashboard</h2>
+
+  <!-- 🔘 Logout Button -->
+  <button id="logoutBtn">Logout</button>
+
+  <!-- 🔍 Search Teachers -->
+  <h3>Search Teachers</h3>
+  <input type="text" id="searchBox" placeholder="Search by name or subject" />
+  <ul id="teacherList"></ul>
+
+  <!-- 📅 Appointment Booking Form -->
+  <div id="appointmentForm" style="margin-top: 20px; border: 1px solid #ccc; padding: 15px;">
+    <h4>Book Appointment</h4>
+    <form id="bookForm">
+      <label for="teacherSelect">Select Teacher:</label><br>
+      <select id="teacherSelect" required>
+        <option value="">-- Choose a Teacher --</option>
+      </select><br><br>
+
+      <label for="appointmentDateTime">Choose Date & Time:</label><br>
+      <input type="datetime-local" id="appointmentDateTime" required /><br><br>
+
+      <button type="submit">Confirm Appointment</button>
+    </form>
+  </div>
+ <!-- 💬 Send Message Form -->
+<div id="messageForm" style="margin-top: 20px; border: 1px solid #ccc; padding: 15px;">
+  <h4>Send Message</h4>
+  <form id="sendMessageForm">
+    <label for="teacherMessageSelect">Select Teacher:</label><br>
+    <select id="teacherMessageSelect" required>
+      <option value="">-- Choose a Teacher --</option>
+    </select><br><br>
+
+    <label for="messageContent">Your Message:</label><br>
+    <textarea id="messageContent" rows="4" cols="50" required></textarea><br><br>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+  <!-- 📖 Appointments -->
+  <h3>Your Appointments</h3>
+  <ul id="appointmentsList"></ul>
+
+  <!-- ✅ Firebase SDKs (v8) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- ✅ Firebase Config + Logic -->
+  <script src="../js/firebase-init.js"></script>
+  <script src="../js/logout.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>
